@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    /* max-width: 100%; */
+    min-height: 150vh;
+    display: flex;
+    justify-content: center;
+    /* background:var(--backgroundColor); */
+    background:url('../images/bg2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: var(--poppins);
+}
+.table-container{
+    width: 90%;
+}
+.table:hover{
+    box-shadow: 0 0 10px var(--lightblue);
+    transition: 0.3s all ease;
+}
+.infa{
+    margin-top: 20px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: white;
+}
+.table{
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.397);
+    width: 100%;
+    border-collapse:collapse;
+    transition: 0.3s all ease;
+}
+.table thead{
+    border-bottom: 0.8px solid rgba(255, 255, 255, 0.342);
+    background-color: var(--blue);
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    opacity: 0.9;
+}
+.table thead tr th{
+    padding: 0.8rem;
+    width: 100px;
+    vertical-align: top;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+}
+
+.table tbody tr td{
+    font-weight: normal;
+    font-size: 0.9rem;
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.233);
+}
+.table tbody tr:hover {
+    transform: translateY(-5px);
+    background:var(--secondaryDarkColor);
+    transition: 0.3s all ease;
+}
+@media (max-width:800px) {
+    .table thead{
+        display: none;
+    }
+    .table,.table tbody, .table td, .table tr{
+        display: block;
+        width: 100%;
+    }
+    .table tr{
+        margin-bottom: 10px;
+    }
+    .table tbody tr td{
+        text-align: right;
+        position: relative;
+        padding-left: 50%;
+        
+    }
+    .table td::before{
+        content: attr(data-label);
+        position: absolute;
+        left: 0;    
+        font-weight: 900;
+    }
+    /* .table tbody tr{
+        width: 50px;
+    } */
+}
+
+@media (max-width:451px) {
+    .infa{
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width:375px){
+    .table tbody tr td{ 
+        font-size: 0.7rem;
+    }
+}

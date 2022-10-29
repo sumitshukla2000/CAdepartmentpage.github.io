@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Open+Sans&family=Roboto+Slab:wght@500&family=Ubuntu:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mulish&family=Open+Sans&family=Roboto+Slab:wght@500&family=Ubuntu:wght@300;400&display=swap');@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Mulish&family=Open+Sans&family=Poppins:wght@500&family=Roboto+Slab:wght@500&family=Ubuntu:wght@300;400&display=swap');
+/* open sans */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Lato&family=League+Spartan:wght@600&family=Montserrat&family=Mulish&family=Open+Sans:wght@300&family=Poppins:wght@500&family=Roboto+Slab:wght@500&family=Source+Sans+Pro&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+:root{
+--primaryColor:hsl(183, 49%, 63%);
+--backgroundColor:hsl(216, 19%, 16%);
+--white:hsl(0, 0%, 100%);
+--blue:hsl(183, 100%, 35%);
+--lightblue:hsl(183, 49%, 63%);
+--secondaryDarkColor:hsl(217, 10%, 25%);
+}
+
+:root{
+--outfit:"Outfit" , sans-serif;
+--poppins:'Poppins', sans-serif;
+--open:'Open Sans', sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 0.5rem;
+    background-color: var(--secondaryDarkColor);
+    outline: 1px solid slategray;
+}
+
+::-webkit-scrollbar-track{
+    background: var(--secondaryDarkColor);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--blue);
+    border-radius: 2rem;
+  }
+  .gotop{
+    width:50px;
+    height: 50px;
+    background-color: var(--blue);
+    color: white;
+    font-weight: 800;
+    font-size: 2rem;
+    position: fixed;
+    top: 90%;
+    left: 90%;
+    text-align: center;
+    border-radius: 3px; 
+    animation: shake 2s linear infinite;
+  }
+  @keyframes shake {
+        10%{
+            transform: scale(1.1) rotate(10deg);
+        }
+        30%{
+            transform: scale(1.1) rotate(-10deg);
+        }
+        50%{
+            transform: scale(1.1) rotate(10deg);
+        }
+        70%{
+            transform: scale(1.1) rotate(-10deg);
+        }
+  }
+  @media (max-width:600px) {
+    .gotop{
+        left: 86%;
+    }
+}
+  @media (max-width:400px) {
+        .gotop{
+            left: 70%;
+        }
+  }

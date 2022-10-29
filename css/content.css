@@ -1,0 +1,110 @@
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+
+*{
+    margin: 0; 
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+} 
+:root{
+    --primaryColor:hsl(183, 49%, 63%);
+    --backgroundColor:hsl(216, 19%, 16%);
+    --white:hsl(0, 0%, 100%);
+    --blue:hsl(183, 100%, 35%);
+    --lightblue:hsl(183, 49%, 63%);
+    --secondaryDarkColor:hsl(217, 10%, 25%);
+}
+
+:root{
+--outfit:"Outfit" , sans-serif;
+--josif:'Josefin Sans', sans-serif;
+}
+
+body{
+    /* background: var(--blue); */
+    background: linear-gradient(90deg,#2193b0,#6dd5ed);
+    font-family: var(--josif);
+}
+.heading{
+    font-size: 2rem;
+    letter-spacing: 2px;
+    color: var(--white);
+    background-color: var(--secondaryDarkColor);
+    text-align: center;
+    padding: 20px;
+    padding-top: 25px;
+    padding-bottom: 27px;
+    text-shadow: 0 0 16px var(--blue);
+    text-transform: uppercase;
+}
+
+
+nav{
+    position: absolute;
+    top:5em;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    background-color:#2C2C2C;
+    width: 70px;
+    padding-top: 2rem;
+    overflow: hidden;
+    transition: width 0.2s linear;
+    box-shadow: 0 0 15px var(--backgroundColor);
+}
+a{
+    position: relative;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 500;
+    display: table;
+    width: 100%;
+    padding-bottom: 16px;
+    display: flex;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+.fas{
+    position: relative;
+    width: 70px;
+    height: 40px;
+    top: 14px;
+    font-size: 1.7rem;
+    text-align: center;
+}
+.item{
+    display: block;
+    position: relative;
+    top: 12px;
+    margin-top: 10px;
+    margin-left:2.3em;
+}
+a:hover{
+    background-color:  var(--blue);
+    border-radius: 10px;
+    color: var(--secondaryDarkColor);
+    font-weight: 600;
+    transition: 0.5s all ease;
+    padding-bottom: 20px;
+}
+nav:hover{
+    width: 100%;
+    transition: all 0.6s ease;
+}
+
+@media (max-width:200px){
+    .heading{
+        font-size: 0.4rem;
+        text-align: center;
+        word-break: break-all;
+    }
+    .fas{
+        font-size: 1.1rem;
+    }
+    nav{
+        width: 50px;
+    }
+}
